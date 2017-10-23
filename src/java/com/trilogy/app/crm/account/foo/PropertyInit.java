@@ -15,7 +15,16 @@ public class PropertyInit {
     // 21- item
     public int case21;
     public PropertyInit(int bar, int x, int z) {
-        case21 = bar;
+        case21 = z;
+    }
+
+    public PropertyInit(int bar, int x) {
+        case21 = x;
+    }
+
+    public PropertyInit(int z, int zy, float dod, Object o, boolean b) {
+        case21 = z;
+        case20 = zy;
     }
 
     public int getCase21() {

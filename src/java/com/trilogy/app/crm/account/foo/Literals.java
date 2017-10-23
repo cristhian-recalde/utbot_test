@@ -2,11 +2,16 @@ package com.trilogy.app.crm.account.foo;
 
 import java.math.BigDecimal;
 
-
 public class Literals {
+
     final int val = -5;
     final int x = 5;
-/*
+    private String name;
+
+    public Literals(String name) {
+        this.name = name;
+    }
+
     //3- item
     public String getCase3() {
         return "A" + "BC";
@@ -41,26 +46,40 @@ public class Literals {
         return (123 + 456)*15 + "ABC";
     }
 
-    public float getFloat() {
-        return 123/456.0f;
+    public float getInfex() {
+        return 5 % 2 + (3 * x + 5) - getVal() + getValueMax();
     }
-*/
+
+    public String getFormatedName() {
+        return name + "--named";
+    }
+
+    public float getFloat() {
+        return 123 / 456.0f;
+    }
+
+    public float getDivide(int xy) {
+        return x / xy;
+    }
+
     public float getInvalid() {
-        return 123/ (x - 5);
+        return 123 / (x - 5);
     }
 
     public float getInvalid2() {
-        return 124 / getVal() ;
+        return 124 / getVal();
     }
 
     public float getInfinity() {
-        return 123/0;
+        return 123 / 0;
     }
 
-    public int getVal() { return 0; }
+    public int getVal() {
+        return 0;
+    }
 
     public long getValueMax() {
-        return Math.max(123, 456);
+        return Math.max(123, getVal());
     }
 
     public long getValueMaxIn() {
